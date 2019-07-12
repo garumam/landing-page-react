@@ -24,3 +24,14 @@ export const RowResponsive = styled(Row)`
         width: ${props => props.largeWidth};
     }
 `
+
+export const LinkStyled = styled.a`
+    color: black;
+    margin-right: 20px;
+    font-weight: 400;
+    transition: 0.15s ease-in-out 0s;
+    cursor: pointer;
+    :hover {
+        color: #0069ff;
+    }
+`

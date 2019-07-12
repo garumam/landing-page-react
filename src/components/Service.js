@@ -24,7 +24,11 @@ const useStyles = makeStyles(theme => ({
         padding: '0 15px 25px 15px',
         marginLeft: '10px',
         marginRight: '10px',
-        marginBottom: '40px'
+        marginBottom: '40px',
+        boxShadow: 'none'
+    },
+    lastPaper: {
+        marginBottom: '0px'
     },
     h5: {
         paddingBottom: theme.spacing(2)
@@ -63,7 +67,7 @@ export default () => {
                 </Row>
             </Container> 
             <Container >
-                <Row maxWidth="300px">
+                <Row maxWidth="400px">
                     <Paper className={classes.paper}>
                         <Box component="span" className={classes.span}>1</Box>
                         <Box marginBottom="35px" component="img" src={download}></Box>
@@ -75,7 +79,7 @@ export default () => {
                         </Typography>
                     </Paper>
                 </Row>
-                <Row maxWidth="300px">
+                <Row maxWidth="400px">
                     <Paper className={classes.paper}>
                         <Box component="span" className={classes.span}>2</Box>
                         <Box marginBottom="35px" component="img" src={paper}></Box>
@@ -87,8 +91,8 @@ export default () => {
                         </Typography>
                     </Paper>
                 </Row>
-                <Row maxWidth="300px">
-                    <Paper className={classes.paper}>
+                <Row maxWidth="400px">
+                    <Paper className={`${classes.paper} ${classes.lastPaper}`}>
                         <Box component="span" className={classes.span}>3</Box>
                         <Box marginBottom="35px" component="img" src={box}></Box>
                         <Typography variant="h5" className={classes.h5}>

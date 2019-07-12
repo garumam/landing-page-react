@@ -8,15 +8,13 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
+import ArrowRight from '@material-ui/icons/ArrowRight';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
-
+import { LinkStyled } from '../styles/style'
+import { scroller, animateScroll as scroll } from "react-scroll";
 
 const useStyles = makeStyles(theme => ({
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
   },
@@ -57,6 +55,17 @@ export default function ButtonAppBar() {
     setState({ ...state, right: open });
   }
 
+  const scrollTo = (sectionId) => { 
+    return(
+      scroller.scrollTo(sectionId, {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+        offset: -70
+      }) 
+    )
+  }
+
   const sideList = () => (
     <div
       className={classes.list}
@@ -65,16 +74,22 @@ export default function ButtonAppBar() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {['Home', 'Funcionalidades', 'Preço', 'FAQ'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon><MailIcon /></ListItemIcon>
-            <ListItemText primary={text} />
+        {[{text: 'Home'},
+          {text: 'Funcionalidades',
+           section: 'feature_section'}, 
+          {text: 'Preço',
+           section: '#'}, 
+          {text: 'Contato',
+           section: '#'}].map((item) => (
+          <ListItem onClick={() => {item.text === 'Home'? scroll.scrollToTop() : scrollTo('feature_section')}} component={LinkStyled} key={item.text}>
+            <ListItemIcon><ArrowRight /></ListItemIcon>
+            <ListItemText primary={item.text} />
           </ListItem>
         ))}
       </List>
     </div>
   )
-
+  
   return (
     
       <AppBar position="fixed" className={classes.appBarColor}>
@@ -82,10 +97,14 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             SEVS
           </Typography>
-          <Button color="inherit" className={classes.menu}>Home</Button>
-          <Button color="inherit" className={classes.menu}>Funcionalidades</Button>
-          <Button color="inherit" className={classes.menu}>Preço</Button>
-          <Button color="inherit" className={classes.menu}>FAQ</Button>
+
+          <LinkStyled onClick={() => {scroll.scrollToTop()}} className={classes.menu}>Home</LinkStyled>
+          <LinkStyled onClick={() => {scrollTo('feature_section')}} className={classes.menu}>
+            Funcionalidades
+          </LinkStyled>
+          <LinkStyled className={classes.menu} to="">Preço</LinkStyled>
+          <LinkStyled className={classes.menu} to="">Contato</LinkStyled>
+
           <Button onClick={toggleDrawer(true)} className={classes.drawer}><MenuIcon /></Button>
           <Drawer anchor="right" open={state.right} onClose={toggleDrawer(false)}>
             {sideList('right')}

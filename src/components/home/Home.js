@@ -24,7 +24,7 @@ export default function ButtonAppBar() {
 
   return (
 
-      <Box component="section" id="home_section">
+      <Box component="section">
         <Box top="0" padding="0px" className="section_Home" />
 
         <Container flexDirection="column">

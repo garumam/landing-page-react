@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Home from './components/home/Home'
 import Service from './components/Service'
 import Info from './components/Info'
+import Feature from './components/Features'
 import { makeStyles } from '@material-ui/core/styles'
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
       <Home />
       <Service />
       <Info />
+      <Feature />
     </div>
   );
 }
