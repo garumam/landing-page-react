@@ -15,9 +15,13 @@ const useStyles = makeStyles(theme => ({
     text: {
       flexGrow: 1,
       textAlign: 'center',
-      fontFamily: 'Robot',
-      fontWeight: "fontWeightBold",
       padding: theme.spacing(1),
+    },
+    fontWeightBig: {
+      fontWeight: '700'
+    },
+    fontWeightMedium: {
+      fontWeight: '500'
     },
     colorBlue: {
       color: '#0069ff'
@@ -42,10 +46,10 @@ export default () => {
         <Box id="feature_section" component="section" marginBottom="100px">
             <Container flexDirection="column">
                 <Row>
-                    <Typography variant="body1" className={`${classes.text} ${classes.colorBlue}`}>
+                    <Typography variant="body1" className={`${classes.text} ${classes.colorBlue} ${classes.fontWeightBig}`}>
                         FEATURES
                     </Typography>
-                    <Typography variant="h4" className={classes.text}>
+                    <Typography variant="h4" className={`${classes.text} ${classes.fontWeightMedium}`}>
                         Why you choose Our Plugin
                     </Typography>
                 </Row>

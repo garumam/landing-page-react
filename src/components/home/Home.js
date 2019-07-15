@@ -4,19 +4,18 @@ import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import note from '../../assets/home-image.png'
 import Slide from 'react-reveal/Slide'
-import { Container, Row } from '../../styles/style'
-
-import './Home.css'
+import { Container, Row, Background } from '../../styles/style'
 
 const useStyles = makeStyles(theme => ({
   text: {
     flexGrow: 1,
     textAlign: 'center',
     color: 'white',
-    fontFamily: 'Robot',
-    fontWeight: "fontWeightBold",
     padding: theme.spacing(2),
-  }
+  },
+  fontWeightBig: {
+    fontWeight: '700'
+  },
 }));
 
 export default function ButtonAppBar() {
@@ -25,11 +24,11 @@ export default function ButtonAppBar() {
   return (
 
       <Box component="section">
-        <Box top="0" padding="0px" className="section_Home" />
+        <Background topZero />
 
         <Container flexDirection="column">
           <Row maxWidth="700px">
-            <Typography variant="h2" className={classes.text}>
+            <Typography variant="h2" className={`${classes.text} ${classes.fontWeightBig}`}>
               Ultimate Platform to monitor your best workflow.
             </Typography>
             <Typography variant="body1" className={classes.text}>

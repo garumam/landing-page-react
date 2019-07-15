@@ -11,6 +11,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ArrowRight from '@material-ui/icons/ArrowRight';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import PropTypes from 'prop-types';
 import { LinkStyled } from '../styles/style'
 import { scroller, animateScroll as scroll } from "react-scroll";
 
@@ -18,9 +20,45 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
   },
-  appBarColor: {
-      background: 'white',
-      color: 'black'
+  menuShow: {
+    background: 'rgba(255,255,255,1)',
+    color: 'black',
+    WebkitTransition: 'background .5s ease-out',
+    MozTransition: 'background .5s ease-out',
+    OTransition: 'background .5s ease-out',
+    transition: 'background .5s ease-out'
+  },
+  menuHide: {
+    background: 'rgba(255,255,255,0)',
+    color: 'white',
+    WebkitTransition: 'background .5s ease-out',
+    MozTransition: 'background .5s ease-out',
+    OTransition: 'background .5s ease-out',
+    transition: 'background .5s ease-out'
+  },
+  hoverMenuShow: {
+    '&:hover': {
+      color: '#0069ff'
+    }
+  },
+  hoverMenuHide: {
+    '&:hover': {
+      color: '#40E0D0'
+    }
+  },
+  toolbarHeightHide: {
+    height: '100px',
+    WebkitTransition: 'height .5s ease-out',
+    MozTransition: 'height .5s ease-out',
+    OTransition: 'height .5s ease-out',
+    transition: 'height .5s ease-out'
+  },
+  toolbarHeightShow: {
+    height: '64px',
+    WebkitTransition: 'height .5s ease-out',
+    MozTransition: 'height .5s ease-out',
+    OTransition: 'height .5s ease-out',
+    transition: 'height .5s ease-out'
   },
   menu: {
     [theme.breakpoints.down('sm')]: {
@@ -40,7 +78,56 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ButtonAppBar() {
+function OpacityScroll(props) {
+  const { children, classes } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
+  return React.cloneElement(children, {
+    className: trigger ? `${classes.menuShow}` : `${classes.menuHide}`,
+    elevation: trigger ? 4 : 0
+  });
+}
+
+OpacityScroll.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+function HoverMenuScroll(props) {
+  const { children, classes } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
+  return React.cloneElement(children, {
+    className: trigger ? `${classes.hoverMenuShow}` : `${classes.hoverMenuHide}`,
+  });
+}
+
+HoverMenuScroll.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+function ToolbarHeight(props) {
+  const { children, classes } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
+  return React.cloneElement(children, {
+    className: trigger ? `${classes.toolbarHeightShow}` : `${classes.toolbarHeightHide}`,
+  });
+}
+
+ToolbarHeight.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default function ButtonAppBar(props) {
   const classes = useStyles();
 
   const [state, setState] = React.useState({
@@ -91,26 +178,36 @@ export default function ButtonAppBar() {
   )
   
   return (
-    
-      <AppBar position="fixed" className={classes.appBarColor}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            SEVS
-          </Typography>
+    <OpacityScroll {...props} classes={classes}>
+      <AppBar position="fixed">
+        <ToolbarHeight {...props} classes={classes}>
+          <Toolbar className={classes.colorExtend}>
+            <Typography variant="h6" className={classes.title}>
+              SEVS
+            </Typography>
+            
+            <HoverMenuScroll {...props} classes={classes}>
+              <LinkStyled onClick={() => {scroll.scrollToTop()}} className={classes.menu}>Home</LinkStyled>
+            </HoverMenuScroll>
+            <HoverMenuScroll {...props} classes={classes}>
+              <LinkStyled onClick={() => {scrollTo('feature_section')}} className={classes.menu}>
+                Funcionalidades
+              </LinkStyled>
+            </HoverMenuScroll>
+            <HoverMenuScroll {...props} classes={classes}>
+              <LinkStyled className={classes.menu} to="">Preço</LinkStyled>
+            </HoverMenuScroll>
+            <HoverMenuScroll {...props} classes={classes}>
+              <LinkStyled className={classes.menu} to="">Contato</LinkStyled>
+            </HoverMenuScroll>
 
-          <LinkStyled onClick={() => {scroll.scrollToTop()}} className={classes.menu}>Home</LinkStyled>
-          <LinkStyled onClick={() => {scrollTo('feature_section')}} className={classes.menu}>
-            Funcionalidades
-          </LinkStyled>
-          <LinkStyled className={classes.menu} to="">Preço</LinkStyled>
-          <LinkStyled className={classes.menu} to="">Contato</LinkStyled>
-
-          <Button onClick={toggleDrawer(true)} className={classes.drawer}><MenuIcon /></Button>
-          <Drawer anchor="right" open={state.right} onClose={toggleDrawer(false)}>
-            {sideList('right')}
-          </Drawer>
-        </Toolbar>
+            <Button onClick={toggleDrawer(true)} className={classes.drawer} color="inherit"><MenuIcon /></Button>
+            <Drawer anchor="right" open={state.right} onClose={toggleDrawer(false)}>
+              {sideList('right')}
+            </Drawer>
+          </Toolbar>
+        </ToolbarHeight>
       </AppBar>
-    
+    </OpacityScroll>
   );
 }

@@ -4,6 +4,7 @@ import Home from './components/home/Home'
 import Service from './components/Service'
 import Info from './components/Info'
 import Feature from './components/Features'
+import SystemPrints from './components/SystemPrints'
 import { makeStyles } from '@material-ui/core/styles'
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
       <Service />
       <Info />
       <Feature />
+      <SystemPrints />
     </div>
   );
 }

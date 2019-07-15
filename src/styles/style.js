@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import textureBg from '../assets/home-texture.png'
 
 export const Container = styled.div`
     display: flex;
@@ -26,7 +27,7 @@ export const RowResponsive = styled(Row)`
 `
 
 export const LinkStyled = styled.a`
-    color: black;
+    color: inherit;
     margin-right: 20px;
     font-weight: 400;
     transition: 0.15s ease-in-out 0s;
@@ -34,4 +35,18 @@ export const LinkStyled = styled.a`
     :hover {
         color: #0069ff;
     }
+`
+
+export const Background = styled.div`
+    background-image: url(${textureBg}), linear-gradient(35deg, rgb(0, 255, 255) 0%, rgb(0, 105, 255) 100%);
+    background-size: cover;
+    padding: 150px 0px 50px;
+    ${props => props.topZero && "top: 0;"}
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: ${props => props.height || "900px"};
+    z-index: -1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0 100%);
 `
