@@ -103,7 +103,7 @@ function HoverMenuScroll(props) {
   });
 
   return React.cloneElement(children, {
-    className: trigger ? `${classes.hoverMenuShow}` : `${classes.hoverMenuHide}`,
+    className: trigger ? `${classes.menu} ${classes.hoverMenuShow}` : `${classes.menu} ${classes.hoverMenuHide}`,
   });
 }
 
@@ -181,24 +181,24 @@ export default function ButtonAppBar(props) {
     <OpacityScroll {...props} classes={classes}>
       <AppBar position="fixed">
         <ToolbarHeight {...props} classes={classes}>
-          <Toolbar className={classes.colorExtend}>
+          <Toolbar>
             <Typography variant="h6" className={classes.title}>
               SEVS
             </Typography>
             
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled onClick={() => {scroll.scrollToTop()}} className={classes.menu}>Home</LinkStyled>
+              <LinkStyled onClick={() => {scroll.scrollToTop()}}>Home</LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled onClick={() => {scrollTo('feature_section')}} className={classes.menu}>
+              <LinkStyled onClick={() => {scrollTo('feature_section')}}>
                 Funcionalidades
               </LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled className={classes.menu} to="">Preço</LinkStyled>
+              <LinkStyled to="">Preço</LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled className={classes.menu} to="">Contato</LinkStyled>
+              <LinkStyled to="">Contato</LinkStyled>
             </HoverMenuScroll>
 
             <Button onClick={toggleDrawer(true)} className={classes.drawer} color="inherit"><MenuIcon /></Button>
