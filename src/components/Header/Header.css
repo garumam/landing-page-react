@@ -1,0 +1,55 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%; 
+    background: #fff; 
+    padding: 0;
+}
+
+.appBarMenu {
+    display: none;
+    line-height: 64px;
+    float: right;
+    padding-right: 30px;
+    border-bottom: unset;
+}
+
+.drawerMenu {
+    border-right: unset;
+}
+
+.drawerMenu li {
+    padding: unset;
+}
+
+.logo {
+    line-height: 64px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 50px;
+    font-size: 2rem;
+}
+
+.menuIcon { 
+    float: right; 
+    line-height: 64px; 
+    padding-right: 50px;
+}
+
+.menuIcon svg { 
+    font-size: 1.5rem;
+}
+
+.menuIcon:hover {
+    color: #1890ff;
+}
+
+@media (min-width: 650px) {
+    .menuIcon {
+        display: none;
+    }
+    .appBarMenu {
+        display: block;
+    }
+}

@@ -182,23 +182,23 @@ export default function ButtonAppBar(props) {
       <AppBar position="fixed">
         <ToolbarHeight {...props} classes={classes}>
           <Toolbar>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h4" className={classes.title}>
               SEVS
             </Typography>
             
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled onClick={() => {scroll.scrollToTop()}}>Home</LinkStyled>
+              <LinkStyled onClick={() => {scroll.scrollToTop()}}>HOME</LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
               <LinkStyled onClick={() => {scrollTo('feature_section')}}>
-                Funcionalidades
+                FUNCIONALIDADES
               </LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled to="">Preço</LinkStyled>
+              <LinkStyled to="">PREÇO</LinkStyled>
             </HoverMenuScroll>
             <HoverMenuScroll {...props} classes={classes}>
-              <LinkStyled to="">Contato</LinkStyled>
+              <LinkStyled to="">CONTATO</LinkStyled>
             </HoverMenuScroll>
 
             <Button onClick={toggleDrawer(true)} className={classes.drawer} color="inherit"><MenuIcon /></Button>
