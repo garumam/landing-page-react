@@ -2,8 +2,16 @@ import React from 'react';
 import { Layout, Menu, Icon, Drawer } from 'antd';
 import { scroller, animateScroll as scroll } from "react-scroll";
 import './Header.css';
+import styled from "styled-components";
 
 const { Header } = Layout;
+
+export const Background = styled.div`
+    display:block;
+    height:600px;
+    top:64;
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,145,255,1) 100%);
+`;
 
 const scrollTo = (sectionId) => { 
     return(
@@ -16,12 +24,13 @@ const scrollTo = (sectionId) => {
     )
 }
 
-const menu = (classe, mode, onClose) => (
+const menu = (classe, mode, onClose,style) => (
     <Menu
         theme="light"
         mode={mode}
         className={classe}
         selectable={false}
+        style={style}
     >
         {[{text: 'HOME'},
         {text: 'FUNCIONALIDADES', section: 'feature_section'}, 
@@ -37,13 +46,13 @@ const menu = (classe, mode, onClose) => (
     </Menu>
 )
 
-export default ({ onClose, visible, showDrawer }) => (
-    <Header className="header">
+export default ({ onClose, visible, showDrawer, style }) => (
+    <Header className="header" style={style}>
         <div className="logo">
             SEVS
         </div>
 
-        {menu('appBarMenu', 'horizontal')}
+        {menu('appBarMenu', 'horizontal',null,style)}
         
         <Icon type="menu-fold" className="menuIcon" onClick={showDrawer} />
 

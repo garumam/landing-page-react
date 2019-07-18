@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import { Layout } from 'antd';
-import Header from './components/Header/Header';
+import Header,{Background} from './components/Header/Header';
 
 import './App.css';
+import { blue } from '@material-ui/core/colors';
 
 const { Content, Footer } = Layout;
 
@@ -47,6 +48,8 @@ class App extends Component {
 
       <Layout className="layout">
         <Header showDrawer={this.showDrawer} onClose={this.onClose} visible={this.state.visible} />
+        <Background/>
+
         <Content style={{ padding: '0 50px' }}>
   
           <div style={{ height: '1400px' }}></div>

@@ -1,17 +1,25 @@
+--root{
+    --heightpadrao: 70px;
+}
 .header {
     position: fixed;
     z-index: 1;
     width: 100%; 
-    background: #fff; 
+    background:transparent; 
     padding: 0;
+    color: white;
+    height: var(--heightpadrao);
+    border-bottom: 1px solid rgba(255, 255, 255,0.3);
 }
 
 .appBarMenu {
     display: none;
-    line-height: 64px;
+    line-height: var(--heightpadrao);
     float: right;
     padding-right: 30px;
     border-bottom: unset;
+    background:transparent; 
+    color: white;
 }
 
 .drawerMenu {
@@ -23,7 +31,7 @@
 }
 
 .logo {
-    line-height: 64px;
+    line-height: var(--heightpadrao);
     float: left;
     text-align: center;
     vertical-align: middle;
@@ -33,7 +41,7 @@
 
 .menuIcon { 
     float: right; 
-    line-height: 64px; 
+    line-height: var(--heightpadrao); 
     padding-right: 50px;
 }
 
