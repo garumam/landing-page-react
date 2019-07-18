@@ -7,9 +7,7 @@ import styled from "styled-components";
 const { Header } = Layout;
 
 export const Background = styled.div`
-    display:block;
     height:600px;
-    top:64;
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,145,255,1) 100%);
 `;
 
