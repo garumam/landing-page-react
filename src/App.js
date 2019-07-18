@@ -4,7 +4,6 @@ import { Layout } from 'antd';
 import Header,{Background} from './components/Header/Header';
 
 import './App.css';
-import { blue } from '@material-ui/core/colors';
 
 const { Content, Footer } = Layout;
 
