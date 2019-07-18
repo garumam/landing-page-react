@@ -1,47 +1,33 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
-import note from '../../assets/home-image.png'
+import React from 'react';
+import { Row, Col } from 'antd';
+import { Typography } from 'antd';
 import Slide from 'react-reveal/Slide'
-import { Container, Row, Background } from '../../styles/style'
+import noteImg from '../../assets/home-image.png'
 
-const useStyles = makeStyles(theme => ({
-  text: {
-    flexGrow: 1,
-    textAlign: 'center',
-    color: 'white',
-    padding: theme.spacing(2),
-  },
-  fontWeightBig: {
-    fontWeight: '700'
-  },
-}));
+const { Title, Paragraph } = Typography;
 
-export default function ButtonAppBar() {
-  const classes = useStyles();
-
-  return (
-
-      <Box component="section">
-        <Background topZero />
-
-        <Container flexDirection="column">
-          <Row maxWidth="700px">
-            <Typography variant="h2" className={`${classes.text} ${classes.fontWeightBig}`}>
-              Ultimate Platform to monitor your best workflow.
-            </Typography>
-            <Typography variant="body1" className={classes.text}>
-              For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!
-            </Typography>
-          </Row>
-          <Row>
-            <Slide bottom>  
-              <Box maxWidth="100%" component="img" src={note} alt="Menu lateral" />
-            </Slide>
-          </Row>
-        </Container>
-      </Box>
-    
-  );
-}
+export default () => (
+    <section>
+        <Row type="flex">
+            <Col 
+            xs={{ span: 24, offset: 0 }} 
+            sm={{ span: 22, offset: 1 }} 
+            md={{ span: 20, offset: 2 }} 
+            lg={{ span: 16, offset: 4 }} 
+            style={{ textAlign: 'center' }}
+            >
+                <Title style={{ color: 'white' }}>
+                Ultimate Platform to monitor your best workflow.
+                </Title>
+                <Paragraph style={{ color: 'white' }}>
+                For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!
+                </Paragraph>
+            </Col>
+            <Col span={24}>
+                <Slide bottom> 
+                    <img src={noteImg} alt="Sistema SEVS" />
+                </Slide>
+            </Col>
+        </Row>
+    </section>
+);

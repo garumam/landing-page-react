@@ -1,14 +1,28 @@
 import React from 'react';
 import { Layout, Menu, Icon, Drawer } from 'antd';
 import { scroller, animateScroll as scroll } from "react-scroll";
-import './Header.css';
 import styled from "styled-components";
+import textureBg from '../../assets/home-texture.png'
+
+import './Header.css';
 
 const { Header } = Layout;
 
 export const Background = styled.div`
-    height:600px;
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,145,255,1) 100%);
+    height: 600px;
+    background: url(${textureBg}), linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(24, 144, 255) 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    position: absolute;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        height: 700px;
+    }
+
+    @media (min-width: 991px) {
+        height: 900px;
+    }
 `;
 
 const scrollTo = (sectionId) => { 
@@ -22,7 +36,7 @@ const scrollTo = (sectionId) => {
     )
 }
 
-const menu = (classe, mode, onClose,style) => (
+const menu = (classe, mode, onClose, style) => (
     <Menu
         theme="light"
         mode={mode}
@@ -44,8 +58,8 @@ const menu = (classe, mode, onClose,style) => (
     </Menu>
 )
 
-export default ({ onClose, visible, showDrawer, style }) => (
-    <Header className="header" style={style}>
+export default ({ onClose, visible, showDrawer, style, menuBg }) => (
+    <Header className={`header ${menuBg}`} style={style}>
         <div className="logo">
             SEVS
         </div>

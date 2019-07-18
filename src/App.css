@@ -1,0 +1,11 @@
+.contentCustom {
+    padding: 0 25px; 
+    margin-top: 150px; 
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .contentCustom {
+        padding: 0 50px; 
+    }
+}

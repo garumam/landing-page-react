@@ -1,25 +1,43 @@
 :root{
-    --heightpadrao: 70px;
+    --heightpadrao: 100px;
 }
 .header {
     position: fixed;
     z-index: 1;
     width: 100%; 
-    background:transparent; 
+    background:transparent;
     padding: 0;
     color: white;
     height: var(--heightpadrao);
+    -moz-transition: height .35s ease-in-out , background .35s ease-in-out;
+    -webkit-transition: height .35s ease-in-out , background .35s ease-in-out;
+    -o-transition: height .35s ease-in-out , background .35s ease-in-out;
+    transition: height .35s ease-in-out , background .35s ease-in-out;
     border-bottom: 1px solid rgba(255, 255, 255,0.3);
+}
+
+.newHeader {
+    color: unset;
+    background: white;
+    height: var(--heightpadrao);
+    -moz-transition: height .35s ease-in-out , background .35s ease-in-out;
+    -webkit-transition: height .35s ease-in-out , background .35s ease-in-out;
+    -o-transition: height .35s ease-in-out , background .35s ease-in-out;
+    transition: height .35s ease-in-out , background .35s ease-in-out;
 }
 
 .appBarMenu {
     display: none;
     line-height: var(--heightpadrao);
+    -moz-transition: line-height .35s ease-in-out;
+    -webkit-transition: line-height .35s ease-in-out;
+    -o-transition: line-height .35s ease-in-out;
+    transition: line-height .35s ease-in-out;
     float: right;
     padding-right: 30px;
     border-bottom: unset;
-    background:transparent; 
-    color: white;
+    background:transparent;
+    color: unset;
 }
 
 .drawerMenu {
@@ -32,6 +50,10 @@
 
 .logo {
     line-height: var(--heightpadrao);
+    -moz-transition: line-height .35s ease-in-out;
+    -webkit-transition: line-height .35s ease-in-out;
+    -o-transition: line-height .35s ease-in-out;
+    transition: line-height .35s ease-in-out;
     float: left;
     text-align: center;
     vertical-align: middle;
@@ -42,6 +64,10 @@
 .menuIcon { 
     float: right; 
     line-height: var(--heightpadrao); 
+    -moz-transition: line-height .35s ease-in-out;
+    -webkit-transition: line-height .35s ease-in-out;
+    -o-transition: line-height .35s ease-in-out;
+    transition: line-height .35s ease-in-out;
     padding-right: 50px;
 }
 
