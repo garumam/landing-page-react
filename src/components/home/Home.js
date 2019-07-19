@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'antd';
-import { Typography } from 'antd';
+import { Row, Col,Typography } from 'antd';
 import Slide from 'react-reveal/Slide'
 import noteImg from '../../assets/home-image.png'
 
