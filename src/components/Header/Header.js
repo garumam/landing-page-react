@@ -1,29 +1,10 @@
 import React from 'react';
 import { Layout, Menu, Icon, Drawer } from 'antd';
 import { scroller, animateScroll as scroll } from "react-scroll";
-import styled from "styled-components";
-import textureBg from '../../assets/home-texture.png'
 
 import './Header.css';
 
 const { Header } = Layout;
-
-export const Background = styled.div`
-    height: 600px;
-    background: url(${textureBg}), linear-gradient(90deg, rgba(0,212,255,1) 0%, rgb(24, 144, 255) 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-    position: absolute;
-    width: 100%;
-
-    @media (min-width: 768px) {
-        height: 700px;
-    }
-
-    @media (min-width: 991px) {
-        height: 900px;
-    }
-`;
 
 const scrollTo = (sectionId) => { 
     return(

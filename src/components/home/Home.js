@@ -1,12 +1,13 @@
 import React from 'react';
 import { Row, Col,Typography } from 'antd';
-import Slide from 'react-reveal/Slide'
-import noteImg from '../../assets/home-image.png'
+import Slide from 'react-reveal/Slide';
+import noteImg from '../../assets/home-image.png';
+import { Section } from '../../styles/styles';
 
 const { Title, Paragraph } = Typography;
 
 export default () => (
-    <section>
+    <Section padBot="50px">
         <Row type="flex">
             <Col 
             xs={{ span: 24, offset: 0 }} 
@@ -24,9 +25,9 @@ export default () => (
             </Col>
             <Col span={24}>
                 <Slide bottom> 
-                    <img src={noteImg} alt="Sistema SEVS" />
+                    <img src={noteImg} alt="Sistema SEVS" style={{ width: '100%' }} />
                 </Slide>
             </Col>
         </Row>
-    </section>
+    </Section>
 );

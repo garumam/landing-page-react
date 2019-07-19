@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 import { Layout } from 'antd';
-import Header,{Background} from './components/Header/Header';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Service from './components/Service/Service';
 import Info from './components/Info/Info';
 import Features from './components/Features/Features';
+
+import { Background } from './styles/styles';
 
 import './App.css';
 
