@@ -9,12 +9,12 @@ const { Title, Paragraph } = Typography;
 export default () => (
     <Section padBot="50px">
         <Row type="flex" gutter={16} align="middle">
-            <Col span={24} md={{ span: 14 }}>
+            <Col span={24} md={{ span: 13 }}>
                 <Slide left>
                     <img src={dashImg} alt="Dashboard SEVS" style={{ paddingBottom: '35px' }} />
                 </Slide>
             </Col>
-            <Col span={24} md={{ span: 10 }}>
+            <Col span={24} md={{ span: 11 }}>
                 <Title>
                 Make your website growth with next level visitors
                 </Title>

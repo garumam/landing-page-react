@@ -8,7 +8,7 @@ import box from '../../../src/assets/box.svg';
 const { Title, Paragraph } = Typography;
 
 export default () => (
-    <Section>
+    <Section padBot="50px">
         <Row type="flex" justify="space-between" gutter={16}>
             <Col 
             xs={{ span: 24, offset: 0 }} 

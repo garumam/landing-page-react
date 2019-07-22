@@ -9,12 +9,20 @@ clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 position: absolute;
 width: 100%;
 
+${props => props.smallHeight && 
+    `
+    @media (max-width: 500px) {
+        height: ${props.smallHeight};
+    }
+    `
+}
+
 @media (min-width: 768px) {
-    height: 700px;
+    height: ${props => props.mediumHeight?props.mediumHeight:'700px'};
 }
 
 @media (min-width: 991px) {
-    height: 900px;
+    height: ${props => props.largeHeight?props.largeHeight:'900px'};
 }
 `;
 

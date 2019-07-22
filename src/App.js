@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Service from './components/Service/Service';
 import Info from './components/Info/Info';
 import Features from './components/Features/Features';
+import Systemprints from './components/SystemPrints/Systemprints';
 
 import { Background } from './styles/styles';
 
@@ -16,7 +17,7 @@ const { Content, Footer } = Layout;
 class App extends Component {
   constructor () {
     super();
-    this.state = { visible: false, menuBg: '' };
+    this.state = { visible: false, menuBg: '', imagePosition: 0 };
   }
   showDrawer = () => {
     this.setState({
@@ -66,6 +67,12 @@ class App extends Component {
     }
   }
 
+  carouselHandle = (imagePosition) => {
+    this.setState({
+      imagePosition: imagePosition,
+    });
+  }
+
   render () {
     return (
 
@@ -84,6 +91,8 @@ class App extends Component {
           <Service />
           <Info />
           <Features />
+          <Systemprints carouselHandle={this.carouselHandle} imagePosition={this.state.imagePosition} />
+
           <div style={{ height: '1400px' }}></div>
   
         </Content>
