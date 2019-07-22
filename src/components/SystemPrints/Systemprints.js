@@ -9,7 +9,7 @@ const { Title, Paragraph } = Typography;
 
 const carouselContent = (title, src, currentImg, imgPosition) => (
     <div>
-        <Title level={4} style={{ color: 'white', paddingTop: '23px' }}>
+        <Title level={4} style={{ color: 'white',paddingTop: '23px', textAlign: 'center' }}>
         {title}
         </Title>
         <Zoom when={currentImg === imgPosition} duration={500}>  

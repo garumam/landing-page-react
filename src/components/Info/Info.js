@@ -7,14 +7,14 @@ import { Section } from '../../styles/styles';
 const { Title, Paragraph } = Typography;
 
 export default () => (
-    <Section padBot="50px">
-        <Row type="flex" gutter={16} align="middle">
-            <Col span={24} md={{ span: 13 }}>
+    <Section padBot="30px" padTop="30px" style={{ background: 'white',marginBottom: '50px' }}>
+        <Row type="flex" align="middle" justify="space-between">
+            <Col span={24} md={{ span: 12 }}>
                 <Slide left>
                     <img src={dashImg} alt="Dashboard SEVS" style={{ paddingBottom: '35px' }} />
                 </Slide>
             </Col>
-            <Col span={24} md={{ span: 11 }}>
+            <Col span={24} md={{ span: 10 }}>
                 <Title>
                 Make your website growth with next level visitors
                 </Title>

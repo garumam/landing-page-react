@@ -12,7 +12,7 @@ import { Background } from './styles/styles';
 
 import './App.css';
 
-const { Content, Footer } = Layout;
+const { Footer } = Layout;
 
 class App extends Component {
   constructor () {
@@ -86,16 +86,13 @@ class App extends Component {
 
         <Background />
 
-        <Content className="contentCustom">
-          <Home />
-          <Service />
-          <Info />
-          <Features />
-          <Systemprints carouselHandle={this.carouselHandle} imagePosition={this.state.imagePosition} />
+        <Home />
+        <Service />
+        <Info />
+        <Features />
+        <Systemprints carouselHandle={this.carouselHandle} imagePosition={this.state.imagePosition} />
 
-          <div style={{ height: '1400px' }}></div>
-  
-        </Content>
+        <div style={{ height: '1400px' }}></div>
 
         <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
       </Layout>

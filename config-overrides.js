@@ -9,7 +9,8 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: { 
-      '@menu-item-active-bg': 'inherit'
+      '@menu-item-active-bg': 'inherit',
+      '@menu-item-color': '#212f4a'
     },
   }),
 );

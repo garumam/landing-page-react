@@ -29,6 +29,8 @@ ${props => props.smallHeight &&
 export const Section = styled.section`
     ${props => props.padTop && `padding-top: ${props.padTop};`}
     ${props => props.padBot && `padding-bottom: ${props.padBot};`}
+    padding-left: 25px;
+    padding-right: 25px;
 `;
 
 export const Span = styled.span`

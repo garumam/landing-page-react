@@ -17,7 +17,7 @@
 }
 
 .newHeader {
-    color: unset;
+    color: #212f4a;
     background: white;
     height: var(--heightpadrao);
     -moz-transition: height .35s ease-in-out , background .35s ease-in-out;
@@ -34,7 +34,7 @@
     -o-transition: line-height .35s ease-in-out;
     transition: line-height .35s ease-in-out;
     float: right;
-    padding-right: 30px;
+    padding-right: 5px;
     border-bottom: unset;
     background:transparent;
     color: unset;
@@ -57,7 +57,7 @@
     float: left;
     text-align: center;
     vertical-align: middle;
-    padding-left: 50px;
+    padding-left: 25px;
     font-size: 2rem;
 }
 
@@ -68,7 +68,7 @@
     -webkit-transition: line-height .35s ease-in-out;
     -o-transition: line-height .35s ease-in-out;
     transition: line-height .35s ease-in-out;
-    padding-right: 50px;
+    padding-right: 25px;
 }
 
 .menuIcon svg { 
