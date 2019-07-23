@@ -18,7 +18,7 @@ export default () => (
                 <Title>
                 Make your website growth with next level visitors
                 </Title>
-                <Paragraph>
+                <Paragraph type="secondary">
                 For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!.
                 </Paragraph>
             </Col>

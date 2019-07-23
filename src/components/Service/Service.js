@@ -31,7 +31,7 @@ export default () => (
                     <Title level={3}>
                     Download our app
                     </Title>
-                    <Paragraph>
+                    <Paragraph type="secondary">
                     Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
                     </Paragraph>
                 </Card>
@@ -43,7 +43,7 @@ export default () => (
                     <Title level={3}>
                     Create a free account
                     </Title>
-                    <Paragraph>
+                    <Paragraph type="secondary">
                     Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
                     </Paragraph>
                 </Card>
@@ -55,7 +55,7 @@ export default () => (
                     <Title level={3}>
                     Now Start your journey
                     </Title>
-                    <Paragraph>
+                    <Paragraph type="secondary">
                     Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
                     </Paragraph>
                 </Card>

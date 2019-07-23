@@ -21,7 +21,7 @@ const features = (src, title, description) => (
                     <Title level={3}>
                     {title}
                     </Title>
-                    <Paragraph>
+                    <Paragraph type="secondary">
                     {description}
                     </Paragraph>
                 </Col>
