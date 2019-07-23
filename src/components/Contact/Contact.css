@@ -1,0 +1,12 @@
+.contact-form-button{
+    width: 100%; 
+    background-color: #212f4a;
+    border-color: #212f4a;
+    color: white;
+}
+
+.contact-form-button:hover{
+    background-color: #1890ff;
+    border-color: #1890ff;
+    color: white;
+}

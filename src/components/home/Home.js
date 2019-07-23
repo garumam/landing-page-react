@@ -7,7 +7,7 @@ import { Section } from '../../styles/styles';
 const { Title, Paragraph } = Typography;
 
 export default () => (
-    <Section padBot="50px" padTop="150px">
+    <Section id="home_section" padBot="50px" padTop="150px">
         <Row type="flex">
             <Col 
             xs={{ span: 24, offset: 0 }} 

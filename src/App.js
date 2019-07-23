@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 import { Layout } from 'antd';
+import { scroller } from "react-scroll";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Service from './components/Service/Service';
 import Info from './components/Info/Info';
 import Features from './components/Features/Features';
 import Systemprints from './components/SystemPrints/Systemprints';
+import Pricing from './components/Pricing/Pricing';
+import Contact from './components/Contact/Contact';
 
 import { Background } from './styles/styles';
 
@@ -73,38 +76,56 @@ class App extends Component {
     });
   }
 
+  scrollTo = (sectionId) => { 
+    return(
+        scroller.scrollTo(sectionId, {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+        offset: -70
+        }) 
+    )
+  }
+  
   render () {
     return (
 
-      <Layout className="layout">
+      <Layout className="layout" style={{ position: 'relative' }}>
         <Header 
         showDrawer={this.showDrawer} 
         onClose={this.onClose} 
         visible={this.state.visible} 
         menuBg={this.state.menuBg}
+        scrollTo={this.scrollTo}
         />
 
         <Background />
+        <Background 
+        clipPath="polygon(0 11%, 100% 16%, 100% 100%, 0% 100%)"
+        style={{ bottom: '0' }}
+        mediumHeight="850px" largeHeight="850px" smallMediumHeight="800px" smallHeight="850px" />
 
         <Home />
         <Service />
         <Info />
         <Features />
         <Systemprints carouselHandle={this.carouselHandle} imagePosition={this.state.imagePosition} />
+        <Pricing scrollTo={this.scrollTo} />
 
-        <div style={{ height: '1400px' }}></div>
-
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        
+        <Contact />
+        
+        <Footer 
+        style={
+        { textAlign: 'center',
+          zIndex: '1',
+          background: 'transparent',
+          color: 'white',
+          borderTop: '5px solid rgba(255,255,255,0.5)' }
+        }
+        >Ant Design ©2018 Created by Ant UED</Footer>
+        
       </Layout>
-  
-      // <div className={classes.root}>
-      //   <Header />
-      //   <Home />
-      //   <Service />
-      //   <Info />
-      //   <Feature />
-      //   <SystemPrints />
-      // </div>
     );
   }
 }
