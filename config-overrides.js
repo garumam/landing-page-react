@@ -11,7 +11,7 @@ module.exports = override(
     modifyVars: { 
       '@menu-item-active-bg': 'inherit',
       '@menu-item-color': '#212f4a',
-      '@input-height-base': '60px',
+      '@input-height-base': '45px',
     },
   }),
 );

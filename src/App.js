@@ -123,7 +123,7 @@ class App extends Component {
           color: 'white',
           borderTop: '1px solid rgba(255,255,255,0.5)' }
         }
-        >Ant Design ©2018 Created by Ant UED</Footer>
+        > © 2019 SEVS by Duck Agency</Footer>
         
       </Layout>
     );
