@@ -37,7 +37,7 @@ export default ({ carouselHandle, imagePosition }) => (
                 </Paragraph>
             </Col>
             <Col span={24}>
-                <Carousel dotPosition="top" afterChange={carouselHandle}>
+                <Carousel autoplay dotPosition="top" afterChange={carouselHandle}>
                     {carouselContent('Dashboard', dashone, imagePosition, 0)}
                     {carouselContent('Orçamentos', dashtwo, imagePosition, 1)}
                     {carouselContent('Vendas', dashone, imagePosition, 2)}
