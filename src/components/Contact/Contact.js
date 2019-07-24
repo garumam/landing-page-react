@@ -44,6 +44,7 @@ class Contact extends Component{
                                 rules: [{ required: true, message: 'Por favor preencha o seu nome!' }],
                             })(
                                 <Input
+                                className="input-contact-form"
                                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                 placeholder="Nome"
                                 />,
@@ -54,6 +55,7 @@ class Contact extends Component{
                                 rules: [{ required: true, message: 'Por favor preencha o e-mail!' },{type: 'email', message: 'O e-mail ainda não é válido!'}],
                             })(
                                 <Input
+                                className="input-contact-form"
                                 prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                 placeholder="E-mail"
                                 />,
@@ -64,8 +66,9 @@ class Contact extends Component{
                                 rules: [{ required: true, message: 'Por favor digite sua mensagem!' }, { max: 1000, message: 'A mensagem pode ter no máximo 1000 caracteres!' }],
                             })(
                                 <Input.TextArea
-                                rows={8}
+                                className="textarea-contact-form"
                                 placeholder="Mensagem"
+                                autosize={{ minRows: '7', maxRows: '7' }}
                                 />,
                             )}
                             </Form.Item>

@@ -1,12 +1,24 @@
 .contact-form-button{
-    width: 100%; 
+    width: 100%;
+    height: 60px; 
     background-color: #212f4a;
     border-color: #212f4a;
     color: white;
+    font-weight: 700;
 }
 
 .contact-form-button:hover{
     background-color: #1890ff;
     border-color: #1890ff;
     color: white;
+}
+
+.input-contact-form > input {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.textarea-contact-form {
+    font-size: 1.2rem;
+    font-weight: 700;
 }

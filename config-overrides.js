@@ -10,7 +10,8 @@ module.exports = override(
     javascriptEnabled: true,
     modifyVars: { 
       '@menu-item-active-bg': 'inherit',
-      '@menu-item-color': '#212f4a'
+      '@menu-item-color': '#212f4a',
+      '@input-height-base': '60px',
     },
   }),
 );

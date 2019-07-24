@@ -103,7 +103,7 @@ class App extends Component {
         <Background 
         clipPath="polygon(0 11%, 100% 16%, 100% 100%, 0% 100%)"
         style={{ bottom: '0' }}
-        mediumHeight="850px" largeHeight="850px" smallMediumHeight="800px" smallHeight="850px" />
+        mediumHeight="950px" largeHeight="950px" smallMediumHeight="950px" smallHeight="1000px" />
 
         <Home />
         <Service />
@@ -121,7 +121,7 @@ class App extends Component {
           zIndex: '1',
           background: 'transparent',
           color: 'white',
-          borderTop: '5px solid rgba(255,255,255,0.5)' }
+          borderTop: '1px solid rgba(255,255,255,0.5)' }
         }
         >Ant Design ©2018 Created by Ant UED</Footer>
         

@@ -2,6 +2,8 @@ import React from 'react';
 import { Row, Col, Typography, Card, Icon, Button } from 'antd';
 import { Section } from '../../styles/styles';
 
+import './Pricing.css';
+
 const { Title, Paragraph } = Typography;
 
 const iconsParameters = {
@@ -38,9 +40,9 @@ export default ({ scrollTo }) => (
                 </Paragraph>
             </Col> 
         </Row>
-        <Row type="flex" justify="center" align="middle" gutter={48}>
-            <Col span={24} sm={{ span: 12 }} lg={{ span: 7 }}>
-                <Card bordered={false} size="small" style={{ marginBottom: '35px', textAlign: 'center' }}>
+        <Row type="flex" justify="center" align="middle">
+            <Col span={24} sm={{ span: 16 }} lg={{ span: 7 }}>
+                <Card bordered={false} size="small" className="card-pricing" style={{ marginBottom: '35px', textAlign: 'center' }}>
                     <Title level={3}>
                     Plano básico
                     </Title>
@@ -58,11 +60,10 @@ export default ({ scrollTo }) => (
                     {includes('Arquivos do sistema', iconsParameters.checkIcon, iconsParameters.colorCheckIcon)}
                     {includes('Processo de hospedagem', iconsParameters.closeIcon, iconsParameters.colorCloseIcon)}
                     {includes('Customizações', iconsParameters.closeIcon, iconsParameters.colorCloseIcon)}
-                    
                 </Card>
             </Col>
-            <Col span={24} sm={{ span: 12 }} lg={{ span: 7 }}>
-                <Card bordered={false} size="small" style={{ marginBottom: '35px', textAlign: 'center' }}>
+            <Col span={24} sm={{ span: 16 }} lg={{ span: 7 }}>
+                <Card bordered={false} size="small" className="card-pricing" style={{ marginBottom: '35px', textAlign: 'center', zIndex: '1' }}>
                     <Title level={3}>
                     Plano instalação
                     </Title>
@@ -83,8 +84,8 @@ export default ({ scrollTo }) => (
 
                 </Card>
             </Col>
-            <Col span={24} sm={{ span: 12 }} lg={{ span: 7 }}>
-                <Card bordered={false} size="small" style={{ marginBottom: '35px', textAlign: 'center' }}>
+            <Col span={24} sm={{ span: 16 }} lg={{ span: 7 }}>
+                <Card bordered={false} size="small" className="card-pricing" style={{ marginBottom: '35px', textAlign: 'center' }}>
                     <Title level={3}>
                     Plano customizado
                     </Title>

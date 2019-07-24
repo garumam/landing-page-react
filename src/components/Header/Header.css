@@ -3,7 +3,7 @@
 }
 .header {
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     width: 100%; 
     background:transparent;
     padding: 0;
@@ -24,6 +24,7 @@
     -webkit-transition: height .35s ease-in-out , background .35s ease-in-out;
     -o-transition: height .35s ease-in-out , background .35s ease-in-out;
     transition: height .35s ease-in-out , background .35s ease-in-out;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.7);
 }
 
 .appBarMenu {
