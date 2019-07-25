@@ -13,7 +13,7 @@ const carouselContent = (title, src, currentImg, imgPosition) => (
         {title}
         </Title>
         <Zoom when={currentImg === imgPosition} duration={500}>  
-            <img src={src} style={{ borderRadius: '10px' }} alt="Imagem do sistema" />
+            <img src={src} style={{ borderRadius: '10px', width: '100%' }} alt="Imagem do sistema" />
         </Zoom>
     </div>
 );

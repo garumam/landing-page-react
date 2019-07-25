@@ -13,8 +13,6 @@ import Contact from './components/Contact/Contact';
 
 import { Background } from './styles/styles';
 
-import './App.css';
-
 const { Footer } = Layout;
 
 class App extends Component {
