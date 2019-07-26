@@ -12,7 +12,7 @@ const { Title, Paragraph } = Typography;
 
 const features = (src, title, description) => (
     <Col span={24} md={{ span: 12 }} lg={{ span: 7 }}>
-        <Card size="small" style={{ marginBottom: '35px' }}>
+        <Card size="small" style={{ marginBottom: '35px', height: '80%' }}>
             <Row type="flex" align="middle">
                 <Col span={6}>
                     <img src={src} alt="Baixar" style={{ paddingRight: '15px' }} />

@@ -32,7 +32,7 @@ ${props => props.smallMediumHeight &&
 }
 
 @media (min-width: 991px) {
-    height: ${props => props.largeHeight?props.largeHeight:'900px'};
+    height: ${props => props.largeHeight?props.largeHeight:'800px'};
 }
 `;
 

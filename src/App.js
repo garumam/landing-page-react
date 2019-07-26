@@ -97,7 +97,7 @@ class App extends Component {
         scrollTo={this.scrollTo}
         />
 
-        <Background />
+        <Background smallHeight="550px" smallMediumHeight="600px" />
         <Background 
         clipPath="polygon(0 11%, 100% 16%, 100% 100%, 0% 100%)"
         style={{ bottom: '0' }}

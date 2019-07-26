@@ -8,8 +8,8 @@ import dashtwo from '../../assets/dash-3-img2.png';
 const { Title, Paragraph } = Typography;
 
 const carouselContent = (title, src, currentImg, imgPosition) => (
-    <div>
-        <Title level={4} style={{ color: 'white',paddingTop: '23px', textAlign: 'center' }}>
+    <div style={{ marginTop: '15px' }}>
+        <Title level={4} style={{ color: 'white',paddingTop: '50px', textAlign: 'center' }}>
         {title}
         </Title>
         <Zoom when={currentImg === imgPosition} duration={500}>  
@@ -27,7 +27,7 @@ export default ({ carouselHandle, imagePosition }) => (
             sm={{ span: 22, offset: 1 }} 
             md={{ span: 20, offset: 2 }} 
             lg={{ span: 16, offset: 4 }} 
-            style={{ textAlign: 'center', marginBottom: '30px' }}
+            style={{ textAlign: 'center', marginBottom: '15px' }}
             >
                 <Title style={{ color: 'white' }}>
                 IMAGENS DO SISTEMA

@@ -8,12 +8,12 @@ const { Title, Paragraph } = Typography;
 
 export default () => (
     <Section id="home_section" padBot="50px" padTop="150px">
-        <Row type="flex">
+        <Row type="flex" justify="center">
             <Col 
-            xs={{ span: 24, offset: 0 }} 
-            sm={{ span: 22, offset: 1 }} 
-            md={{ span: 20, offset: 2 }} 
-            lg={{ span: 16, offset: 4 }} 
+            xs={24}
+            sm={22}
+            md={20} 
+            lg={16} 
             style={{ textAlign: 'center' }}
             >
                 <Title style={{ color: 'white' }}>
@@ -23,9 +23,9 @@ export default () => (
                 Um sistema que traz funcionalidades necessárias para gerir micro e pequenas empresas a um baixo custo!
                 </Paragraph>
             </Col>
-            <Col span={24}>
+            <Col>
                 <Slide bottom> 
-                    <img src={noteImg} alt="Sistema SEVS" style={{ width: '100%' }} />
+                    <img src={noteImg} alt="Sistema SEVS" style={{ maxHeight: '600px' }} />
                 </Slide>
             </Col>
         </Row>

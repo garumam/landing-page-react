@@ -19,7 +19,7 @@ export default () => (
                         onMouseOut={(e) => {e.currentTarget.src = smartTwo}}
                         src={smartTwo} 
                         alt="SEVS responsivo" 
-                        style={{ position: 'absolute', top: '12%', left: '70%', width: '25%' }} />
+                        style={{ position: 'absolute', top: '12%', left: '70%', width: '20%' }} />
                     </div>
                 </Slide>
             </Col>

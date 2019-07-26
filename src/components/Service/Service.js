@@ -25,7 +25,7 @@ export default () => (
                 </Paragraph>
             </Col>
             <Col span={24} md={{ span: 12 }} lg={{ span: 7 }}>
-                <Card style={{ marginBottom: '35px' }}>
+                <Card style={{ marginBottom: '35px', height: '90%' }}>
                     <Span>1</Span>
                     <img src={message} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
@@ -37,7 +37,7 @@ export default () => (
                 </Card>
             </Col>
             <Col span={24} md={{ span: 12 }} lg={{ span: 7 }}>
-                <Card style={{ marginBottom: '35px' }}>
+                <Card style={{ marginBottom: '35px', height: '90%' }}>
                     <Span>2</Span>
                     <img src={deployment} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
@@ -49,7 +49,7 @@ export default () => (
                 </Card>
             </Col>
             <Col span={24} md={{ span: 12, offset: 6 }} lg={{ span: 7, offset: 0 }}>
-                <Card style={{ marginBottom: '35px' }}>
+                <Card style={{ marginBottom: '35px', height: '90%' }}>
                     <Span>3</Span>
                     <img src={time} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
