@@ -30,10 +30,10 @@ export default ({ carouselHandle, imagePosition }) => (
             style={{ textAlign: 'center', marginBottom: '30px' }}
             >
                 <Title style={{ color: 'white' }}>
-                UPDATE
+                IMAGENS DO SISTEMA
                 </Title>
                 <Paragraph style={{ color: 'white' }}>
-                Meet our new updated screen
+                Conheça algumas telas do SEVS
                 </Paragraph>
             </Col>
             <Col span={24}>

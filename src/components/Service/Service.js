@@ -1,9 +1,9 @@
 import React from 'react';
 import { Row, Col, Typography, Card } from 'antd';
 import { Section, Span } from '../../styles/styles';
-import download from '../../../src/assets/download.svg';
-import paper from '../../../src/assets/paper.svg';
-import box from '../../../src/assets/box.svg';
+import message from '../../../src/assets/message.svg';
+import deployment from '../../../src/assets/deployment.svg';
+import time from '../../../src/assets/time.svg';
 
 const { Title, Paragraph } = Typography;
 
@@ -18,45 +18,45 @@ export default () => (
             style={{ textAlign: 'center', marginBottom: '50px' }}
             >
                 <Title style={{color: '#1890ff'}}>
-                WORKING PROCESS
+                PROCESSO DE AQUISIÇÃO
                 </Title>
                 <Paragraph>
-                Our Featured Service that We Provide
+                Passos para adquirir o SEVS
                 </Paragraph>
             </Col>
             <Col span={24} md={{ span: 12 }} lg={{ span: 7 }}>
                 <Card style={{ marginBottom: '35px' }}>
                     <Span>1</Span>
-                    <img src={download} alt="Baixar" style={{ marginBottom: '35px' }} />
+                    <img src={message} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
-                    Download our app
+                    Entrar em contato
                     </Title>
                     <Paragraph type="secondary">
-                    Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
+                    Nós envie uma mensagem através do formulário de contato, para que possamos encontrar o melhor plano para sua empresa.
                     </Paragraph>
                 </Card>
             </Col>
             <Col span={24} md={{ span: 12 }} lg={{ span: 7 }}>
                 <Card style={{ marginBottom: '35px' }}>
                     <Span>2</Span>
-                    <img src={paper} alt="Baixar" style={{ marginBottom: '35px' }} />
+                    <img src={deployment} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
-                    Create a free account
+                    Hospedagem do sistema
                     </Title>
                     <Paragraph type="secondary">
-                    Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
+                    Para os planos intermediário e avançado, nossa equipe poderá sugerir serviços de hospedagem para sua empresa contratar e assim realizarmos a implantação.
                     </Paragraph>
                 </Card>
             </Col>
             <Col span={24} md={{ span: 12, offset: 6 }} lg={{ span: 7, offset: 0 }}>
                 <Card style={{ marginBottom: '35px' }}>
                     <Span>3</Span>
-                    <img src={box} alt="Baixar" style={{ marginBottom: '35px' }} />
+                    <img src={time} alt="Baixar" style={{ marginBottom: '35px', maxWidth: "90px" }} />
                     <Title level={3}>
-                    Now Start your journey
+                    Utilização ilimitada
                     </Title>
                     <Paragraph type="secondary">
-                    Get your blood tests delivered at home collect a sample from the news Get your blood tests delivered with terms.
+                    Aproveite tudo o que o sistema tem a oferecer sem nenhum custo mensal (exceto hospedagem), nos envie sugestões de melhorias.
                     </Paragraph>
                 </Card>
             </Col>

@@ -41,10 +41,10 @@ export default () => (
             style={{ textAlign: 'center', marginBottom: '50px' }}
             >
                 <Title style={{color: '#1890ff'}}>
-                FEATURES
+                FUNCIONALIDADES
                 </Title>
                 <Paragraph>
-                Why you choose Our Plugin
+                Motivos para se utilizar o SEVS
                 </Paragraph>
             </Col>
             {features(lampada, 'App Development', 'Get your proof tests delivered home collect a sample from the news get design.')}

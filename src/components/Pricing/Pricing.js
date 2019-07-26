@@ -33,10 +33,10 @@ export default ({ scrollTo }) => (
             style={{ textAlign: 'center', marginBottom: '50px' }}
             >
                 <Title style={{color: '#1890ff'}}>
-                PRICING PLAN
+                PREÇOS
                 </Title>
                 <Paragraph>
-                What’s our pricing subscription
+                Planos dispiníveis para aquisição
                 </Paragraph>
             </Col> 
         </Row>

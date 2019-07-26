@@ -17,10 +17,10 @@ export default () => (
             style={{ textAlign: 'center' }}
             >
                 <Title style={{ color: 'white' }}>
-                Ultimate Platform to monitor your best workflow.
+                Sistema de gestão integrado para vidraçarias e serralherias
                 </Title>
                 <Paragraph style={{ color: 'white' }}>
-                For Enhanced performance we use LiteSpeed Web Server, HTTP/2, PHP7. We make your website faster, which will help you to increase search ranking!
+                Um sistema que traz funcionalidades necessárias para gerir micro e pequenas empresas a um baixo custo!
                 </Paragraph>
             </Col>
             <Col span={24}>
