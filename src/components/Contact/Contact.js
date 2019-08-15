@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
 import { Row, Col, Typography, Form, Icon, Input, Button } from 'antd';
 import { Section } from '../../styles/styles';
+import axios from 'axios';
 
 import './Contact.css';
 
 const { Title, Paragraph } = Typography;
 
 class Contact extends Component{
+    
+    constructor (props){
+        super(props);
+
+        this.state = {
+            mailstatus: ''
+        }
+    }
 
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
           if (!err) {
             console.log('Received values of form: ', values);
+            this.setState({mailstatus: 'Aguarde um momento...'});
+            axios({
+                method: 'post',
+                url: 'http://localhost:8080/controllers/controllerForm.php',
+                headers: { 
+                    'content-type': 'application/json'
+                },
+                data: {
+                    nome: values.name,
+                    email: values.email,
+                    mensagem: values.message
+                }
+            }).then(result => {this.setState({mailstatus: result.data.status});})
+            .catch(error => {this.setState({mailstatus: error.message});})
+
           }
         });
     };
@@ -40,7 +64,7 @@ class Contact extends Component{
                     <Col span={24} md={{ span: 12 }}>
                         <Form onSubmit={this.handleSubmit} className="contact-form">
                             <Form.Item>
-                            {getFieldDecorator('client', {
+                            {getFieldDecorator('name', {
                                 rules: [{ required: true, message: 'Por favor preencha o seu nome!' }],
                             })(
                                 <Input
@@ -72,6 +96,14 @@ class Contact extends Component{
                                 />,
                             )}
                             </Form.Item>
+
+                            {this.state.mailstatus && <Paragraph style={{color: 'white',
+                                                                 marginBottom: '24px',
+                                                                 textAlign: 'center' }}>
+                                                                {this.state.mailstatus}
+                                                             </Paragraph>
+                            }
+
                             <Form.Item>
                                 <Button htmlType="submit" className="contact-form-button">
                                     Enviar
