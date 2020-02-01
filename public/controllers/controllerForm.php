@@ -24,14 +24,14 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'suporte.sevs@gmail.com';                     // SMTP username
-    $mail->Password   = 'SevsSupport1*';                               // SMTP password
+    $mail->Username   = 'qualquer gmail';                     // SMTP username
+    $mail->Password   = 'sua senha';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('suporte.sevs@gmail.com');
-    $mail->addAddress('suporte.sevs@gmail.com');     // Add a recipient
+    $mail->setFrom('qualquer gmail');
+    $mail->addAddress('qualquer gmail');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
