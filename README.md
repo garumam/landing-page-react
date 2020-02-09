@@ -1,3 +1,9 @@
+## Landing Page Desenvolvida em React
+
+**Imagem da Landing Page**
+
+![Landing Page Completa](https://github.com/garumam/landing-page-react/blob/master/imagens-sistema/pagina-inteira.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
